@@ -6,11 +6,11 @@ import java.util.ArrayList;
 public class Clientes {
 	
 	private Integer id;
-	private LocalDate fecha_nacimiento;
+	private Integer edad;
 	private Integer altura;
 	private String nombre;
-	private LocalDate fechaentrada;
-	private LocalDate fechasalida;
+	private String fechaentrada;
+	private String fechasalida;
 	private Boolean numerosa;
 	private Integer puesto_id;
 	private Integer atraccion_id;
@@ -18,12 +18,12 @@ public class Clientes {
 	
 	
 	Clientes () {
-		id = 0;
-		fecha_nacimiento = LocalDate.of(0,0,0) ;
+	
+		edad= 0 ;
 		altura = 0;
 		nombre = "vacio";
-		fechaentrada = LocalDate.of(0,0,0);
-		fechasalida = LocalDate.of(0,0,0);
+		fechaentrada = " 0-0-0 ";
+		fechasalida = " 0-0-0" ;
 		numerosa = false;
 		puesto_id = 0;
 		atraccion_id = 0;
@@ -32,13 +32,24 @@ public class Clientes {
 		
 	}
 	
-	Clientes (int i, int a, String n) {
-		id = i;
+	Clientes (int d; int a, String n) {
+		edad = d;
 		altura = a;
 		nombre = n;
 	}
 	
-	
+	Clientes (int d; int a, String n, String in, String out; Boolean fam, int p, int at,) {
+		
+		edad = d;
+		altura = a;
+		nombre = n;
+		fechaentrada = in;
+		fechasalida= out;
+		numerosa = fam;
+		atraccion_id = at;
+		puesto_id = p;
+	}
+
 	
 	public String getNombre() {
 		return nombre;
@@ -59,13 +70,13 @@ public class Clientes {
 		this.id = id;
 	}
 
-	public LocalDate getFechaentrada() {
+	public String getFechaentrada() {
 		return fechaentrada;
 	}
 	public void setFechaentrada(LocalDate fechaentrada) {
 		this.fechaentrada = fechaentrada;
 	}
-	public LocalDate getFechasalida() {
+	public String getFechasalida() {
 		return fechasalida;
 	}
 	public void setFechasalida(LocalDate fechasalida) {
@@ -95,11 +106,11 @@ public class Clientes {
 	public void setOfertas_id(ArrayList<int[]> ofertas_id) {
 		this.ofertas_id = ofertas_id;
 	}
-	public LocalDate getFecha_nacimiento() {
+	public Integer getedad() {
 		return fecha_nacimiento;
 	}
-	public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
-		this.fecha_nacimiento = fecha_nacimiento;
+	public void setedad(Ineteger edad) {
+		this.edad = edad;
 	}
 	
 }
