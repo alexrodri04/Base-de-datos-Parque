@@ -17,6 +17,28 @@ public class Clientes {
 	private ArrayList<int[]> ofertas_id = new ArrayList<int[]>();
 	
 	
+	Clientes () {
+		id = 0;
+		fecha_nacimiento = LocalDate.of(0,0,0) ;
+		altura = 0;
+		nombre = "vacio";
+		fechaentrada = LocalDate.of(0,0,0);
+		fechasalida = LocalDate.of(0,0,0);
+		numerosa = false;
+		puesto_id = 0;
+		atraccion_id = 0;
+		ofertas_id = new ArrayList<int[]>();
+		
+		
+	}
+	
+	Clientes (int i, int a, String n) {
+		id = i;
+		altura = a;
+		nombre = n;
+	}
+	
+	
 	
 	public String getNombre() {
 		return nombre;
