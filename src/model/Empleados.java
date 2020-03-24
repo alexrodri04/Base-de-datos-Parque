@@ -3,15 +3,25 @@ import java.util.ArrayList;
 public class Empleados {
 	private Integer id;
 	private String nombre;
-	private Integer cargo_id;
-	private Integer zona_id;
-	private Integer sueldo;
+	private int cargo_id;
+	private int zona_id;
+	private int sueldo;
 	private ArrayList<int[]> atraccion_id = new ArrayList<int[]>();
 	private ArrayList<int[]> puesto_id = new ArrayList<int[]>();
 	
-	
-	public Empleados(Integer id, String nombre, Cargo cargo_id2, Zona zona_id2, Integer sueldo) {
-		// TODO Auto-generated constructor stub
+	public Empleados() {
+		this.id =0;
+		this.nombre="";
+		this.cargo_id=0;
+		this.zona_id = 0;
+		this.sueldo = 0;
+	}
+	public Empleados(Integer id, String nombre, int cargo_id, int zona_id, int sueldo) {
+		this.id = id;
+		this.nombre = nombre;
+		this.cargo_id = cargo_id;
+		this.zona_id = zona_id;
+		this.sueldo= sueldo;
 	}
 
 	public int getId() {
@@ -70,7 +80,10 @@ public class Empleados {
 		this.puesto_id = puesto_id;
 	}
 	
-	
+	public String toString() {
+		String string ="ID: "+ getId()+ "  Nombre: "+ getNombre()+ "  Cargo_id: "+getCargo_id()+ "   Zona_id: "+ getZona_id() + "   Sueldo: "+getSueldo();
+		return string; 
+	}
 	
 
 }
