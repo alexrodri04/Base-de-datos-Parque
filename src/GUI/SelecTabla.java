@@ -29,7 +29,30 @@ public class SelecTabla {
 	                    System.out.println("Has seleccionado la tabla de Clientes");
 	                    switch(funcion) {
 	                    case 3:
-	                    	SQLClientes.insertarDatos();
+			System.out.println("Introduzca información del Cliente:");
+					BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+					  
+					System.out.print("Nombre: ");
+					String nombre = reader.readLine();
+					System.out.print("\nEdad: ");
+					int edad = Integer.parseInt(reader.readLine());
+					System.out.print("\nAltura: ");
+					int altura = Integer.parseInt(reader.readLine());
+					System.out.print("\nFecha entrada: ");
+					String entrada = reader.readLine();
+					System.out.print("\nFecha salida: ");
+					String salida = reader.readLine();
+					System.out.print("\nFamilia numerosa: ");
+					boolean numerosa = sc.nextBoolean();
+					System.out.print("\nPuesto: ");
+					String puesto = reader.readLine();
+					int puesto_id = SQLPuestos.getId(puesto);
+					System.out.print("\nAtracción: ");
+					String atraccion = reader.readLine();
+					int atraccion_id = SQLAtracciones.getId(atraccion);
+				Clientes paco = new Clientes(edad, altura, nombre, entrada, salida, numerosa, puesto_id, atraccion_id);
+		
+	                    	SQLClientes.insertarDatos(paco);
 	                    	break;
 	                    case 4:
 	                    	SQLClientes.obtenerInfo();
@@ -177,10 +200,10 @@ public class SelecTabla {
 	                	salir = true;
 	                	break;
 	                default:
-	                    System.out.println("Solo n�meros entre 1 y 7");
+	                    System.out.println("Solo números entre 1 y 7");
 	            }
 	        } catch (InputMismatchException e) {
-	            System.out.println("Debes insertar un n�mero");
+	            System.out.println("Debes insertar un número");
 	            sc.next();
 	        }
 	    }
