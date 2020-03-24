@@ -3,7 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 public class SQLCreate {
-		public void dbCreate() {
+		public static void Create() {
 			try {
 				Connection c = Conexion.openConnection();
 				//Create tables: begin

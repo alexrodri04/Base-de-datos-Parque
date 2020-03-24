@@ -5,12 +5,13 @@ import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import dbController.SQLCreate;
 //import dbController.selecFuncion;
 import dbController.SelecTabla;
 
 public class Menu {
 
-	public void Menu() throws SQLException, IOException{
+	public static void Interfaz() throws SQLException, IOException{
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
 
@@ -18,14 +19,14 @@ public class Menu {
 
         while (!salir) {
             try {
-                System.out.println("Seleccione la función deseada\n1) Crear tabla \n2) Borrar tabla \n3) Insertar datos en tabla \n"
+                System.out.println("Seleccione la función deseada\n1) Crear tablas \n2) Borrar tabla \n3) Insertar datos en tabla \n"
                 		+ "4) Obtener información de una tabla"+ " \n5) Buscar datos en una tabla \n6) Realizar actualización de datos en una tabla \n"
                 				+ "7) Borrar datos de una tabla \n8) Salir");
                 opcion = sc.nextInt();
                 switch (opcion) {
                     case 1:
-                        System.out.println("Has seleccionado la opcion: Crear tabla");
-                        
+                        System.out.println("Has seleccionado la opcion: Crear tablas");
+                        SQLCreate.Create();
                         break;
                     case 2:
                         System.out.println("Has seleccionado la opcion: Borrar tabla");
