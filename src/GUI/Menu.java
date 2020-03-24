@@ -6,8 +6,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import dbController.SQLCreate;
-//import dbController.selecFuncion;
-import dbController.SelecTabla;
 
 public class Menu {
 
@@ -34,25 +32,25 @@ public class Menu {
                         break;
                     case 3:
                         System.out.println("Has seleccionado la opcion: Insertar datos en tabla");
-	                    SelecTabla.SelecTabla(opcion);
+	                    SelecTabla.SelecTabla(opcion,sc);
                         break;
                     case 4:
                     	System.out.println("Has seleccionado la opcion: Obtener información de una tabla");
-	                    SelecTabla.SelecTabla(opcion);
+	                    SelecTabla.SelecTabla(opcion,sc);
                         break;
                     case 5:
                     	System.out.println("Has seleccionado la opcion: Buscar datos en una tabla");
-	                    SelecTabla.SelecTabla(opcion);
+	                    SelecTabla.SelecTabla(opcion,sc);
                     	break;
                     	
                     case 6:
                     	System.out.println("Has seleccionado la opcion: Realizar una actualización de datos en una tabla ");
-	                    SelecTabla.SelecTabla(opcion);
+	                    SelecTabla.SelecTabla(opcion,sc);
                     	break;
                     	
                     case 7:
                     	System.out.println("Has seleccionado la opción: Borrar datos de una tabla");
-	                    SelecTabla.SelecTabla(opcion);
+	                    SelecTabla.SelecTabla(opcion,sc);
                     	break;
                     	
                     case 8:
