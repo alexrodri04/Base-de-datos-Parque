@@ -32,13 +32,23 @@ public class Clientes {
 		
 	}
 	
-	Clientes (int i, int a, String n) {
-		id = i;
+	Clientes (LocalDate d; int a, String n) {
+		fecha_nacimiento = d;
 		altura = a;
 		nombre = n;
 	}
 	
-	
+	Clientes (LocalDate d; int a, String n, LocalDate in, LocalDate out; Boolean fam, int p, int at,) {
+		fecha_nacimiento = d;
+		altura = a;
+		nombre = n;
+		fechaentrada = in;
+		fechasalida= out;
+		numerosa = fam;
+		atraccion_id = at;
+		puesto_id = p;
+	}
+
 	
 	public String getNombre() {
 		return nombre;
